@@ -5,6 +5,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 using Caliburn.Micro.Unity.WinRT.Code;
+using CaliburnDemo.Views;
 
 namespace CaliburnDemo
 {
@@ -23,8 +24,7 @@ namespace CaliburnDemo
         }
 
         protected override async void OnLaunched(LaunchActivatedEventArgs args)
-        {
-            //For any state other than running, we need to rewire the SettingsFlyout
+        {            
             if (args.PreviousExecutionState != ApplicationExecutionState.Running)
             {
                 await DisplayRootView(typeof(MainView));              
