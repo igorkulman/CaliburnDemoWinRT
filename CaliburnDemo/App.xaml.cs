@@ -1,4 +1,5 @@
 ﻿using System;
+using Caliburn.Micro.Unity.WinRT.Common;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -29,6 +30,14 @@ namespace CaliburnDemo
             {
                 await DisplayRootView(typeof(MainView));              
             }
+        }
+
+        protected override async void OnSuspending(object sender, SuspendingEventArgs e)
+        {
+            base.OnSuspending(sender, e);
+            var deferal = e.SuspendingOperation.GetDeferral();
+            await SuspensionManager.SaveAsync();
+            deferal.Complete();
         }
 
     }

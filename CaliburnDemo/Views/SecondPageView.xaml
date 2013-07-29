@@ -1,14 +1,15 @@
-﻿<Page
+﻿<code:AppPage
     x:Class="CaliburnDemo.Views.SecondPageView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CaliburnDemo.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:code="using:Caliburn.Micro.Unity.WinRT.Code"
     mc:Ignorable="d">
 
     <Grid Background="Red">
         <TextBlock x:Name="Title" />
         <Button Content="Go back" x:Name="GoBack" HorizontalAlignment="Left" Margin="75,321,0,0" VerticalAlignment="Top"/>
     </Grid>
-</Page>
+</code:AppPage>
