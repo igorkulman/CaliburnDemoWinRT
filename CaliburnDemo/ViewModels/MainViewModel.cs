@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Caliburn.Micro;
+﻿using Caliburn.Micro;
 using Caliburn.Micro.Unity.WinRT.ViewModels;
 using PropertyChanged;
 using Windows.UI.Popups;
@@ -22,8 +17,7 @@ namespace CaliburnDemo.ViewModels
 
         public void GoToSecondPage()
         {
-            var md = new MessageDialog("GoToSecondPage invoked", "SecondPageViewModel");
-            md.ShowAsync();
+            navigationService.UriFor<SecondPageViewModel>().Navigate();
         }
     }
 }
