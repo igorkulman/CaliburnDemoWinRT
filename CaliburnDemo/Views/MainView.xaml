@@ -9,5 +9,6 @@
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="Title" />
+        <Button Content="Go to second page" x:Name="GoToSecondPage" HorizontalAlignment="Left" Margin="128,349,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

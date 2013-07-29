@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using Caliburn.Micro.Unity.WinRT.ViewModels;
 using PropertyChanged;
+using Windows.UI.Popups;
 
 namespace CaliburnDemo.ViewModels
 {
@@ -17,6 +18,12 @@ namespace CaliburnDemo.ViewModels
         public MainViewModel(INavigationService navigationService) : base(navigationService)
         {
             Title = "Caliburn Demo";
+        }
+
+        public void GoToSecondPage()
+        {
+            var md = new MessageDialog("GoToSecondPage invoked", "SecondPageViewModel");
+            md.ShowAsync();
         }
     }
 }
