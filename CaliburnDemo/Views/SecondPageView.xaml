@@ -9,5 +9,6 @@
 
     <Grid Background="Red">
         <TextBlock x:Name="Title" />
+        <Button Content="Go back" x:Name="GoBack" HorizontalAlignment="Left" Margin="75,321,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

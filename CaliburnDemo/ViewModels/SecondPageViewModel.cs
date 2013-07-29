@@ -20,6 +20,10 @@ namespace CaliburnDemo.ViewModels
             Title = "Second Page";
         }
 
+        public void GoBack()
+        {
+            this.navigationService.GoBack();
+        }
        
     }
 }

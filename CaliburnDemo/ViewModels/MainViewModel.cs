@@ -17,7 +17,7 @@ namespace CaliburnDemo.ViewModels
 
         public void GoToSecondPage()
         {
-            navigationService.UriFor<SecondPageViewModel>().Navigate();
+            navigationService.UriFor<SecondPageViewModel>().WithParam(l=>l.Title, "Navigated from MainViewModel").Navigate();
         }
     }
 }
