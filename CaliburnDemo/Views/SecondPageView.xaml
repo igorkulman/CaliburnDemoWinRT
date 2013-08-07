@@ -10,6 +10,10 @@
 
     <Grid Background="Red">
         <TextBlock x:Name="Title" />
-        <Button Content="Go back" x:Name="GoBack" HorizontalAlignment="Left" Margin="75,321,0,0" VerticalAlignment="Top"/>
+        <Button Content="Go back" x:Name="GoBack" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="80,201,0,0" TextWrapping="Wrap" Text="{Binding Property1, Mode=TwoWay}" VerticalAlignment="Top" Width="170" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,210,0,0" TextWrapping="Wrap" Text="Property1:" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="80,238,0,0" TextWrapping="Wrap" Text="{Binding Property2, Mode=TwoWay}" VerticalAlignment="Top" Width="170" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,248,0,0" TextWrapping="Wrap" Text="Property2:" VerticalAlignment="Top"/>
     </Grid>
 </code:AppPage>
