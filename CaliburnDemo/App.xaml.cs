@@ -1,5 +1,7 @@
 ﻿using System;
 using Caliburn.Micro.Unity.WinRT.Common;
+using CaliburnDemo.Servcies;
+using Microsoft.Practices.Unity;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -22,6 +24,11 @@ namespace CaliburnDemo
         public App()
         {
             this.InitializeComponent();
+        }
+
+        protected override void Configure()
+        {
+            container.RegisterType<IProductService, ProductService>(new ContainerControlledLifetimeManager());
         }
 
         protected override async void OnLaunched(LaunchActivatedEventArgs args)
